@@ -4,4 +4,6 @@ for steam in "${STEAM_COMPAT_CLIENT_INSTALL_PATH:-}" "$HOME/.local/share/Steam" 
         exec "$steam/steamapps/common/Lepton/lepton" "$@"
     fi
 done
-exec "${CPAK_ROOTFS:-}/usr/share/steam/compatibilitytools.d/lepton/lepton" "$@"
+tool=/usr/share/steam/compatibilitytools.d/lepton/lepton
+[ -x "$tool" ] || tool="${CPAK_ROOTFS:-}$tool"
+exec "$tool" "$@"
