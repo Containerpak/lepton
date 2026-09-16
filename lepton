@@ -1,0 +1,7 @@
+#!/bin/sh
+for steam in "${STEAM_COMPAT_CLIENT_INSTALL_PATH:-}" "$HOME/.local/share/Steam" "$HOME/.steam/steam"; do
+    if [ -n "$steam" ] && [ -x "$steam/steamapps/common/Lepton/lepton" ] && [ -f "$steam/steamapps/common/Lepton/images/system.img" ]; then
+        exec "$steam/steamapps/common/Lepton/lepton" "$@"
+    fi
+done
+exec "${CPAK_ROOTFS:-}/usr/share/steam/compatibilitytools.d/lepton/lepton" "$@"
