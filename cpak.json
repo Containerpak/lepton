@@ -4,7 +4,7 @@
   "name": "Lepton",
   "description": "Run Android games from Steam on Linux with Valve's Lepton compatibility tool.",
   "version": "3.0.1",
-  "image": "ghcr.io/containerpak/lepton@sha256:3959a182ed8121270be860468918eda00ed15179afbe66ece1745154e395d914",
+  "image": "ghcr.io/containerpak/lepton@sha256:8275fe8fc1f8271e849208dc46a3da72ee219d79efd965eac8a816ffd8dca6e6",
   "binaries": [
     "/usr/bin/lepton"
   ],
